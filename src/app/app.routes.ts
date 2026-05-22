@@ -1,9 +1,20 @@
 import { Routes } from '@angular/router';
-import { MainLayout } from '@layout/main-layout/main-layout';
+import { loadingResolver } from '@core/resolvers/loading-resolver';
 
 export const routes: Routes = [
   {
     path: '',
-    component: MainLayout,
+    loadComponent: () => import('@layout/main-layout/main-layout').then((m) => m.MainLayout),
+    resolve: {
+      delay: loadingResolver,
+    },
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('@features/not-found-page/not-found-page').then((m) => m.NotFoundPage),
+    resolve: {
+      delay: loadingResolver,
+    },
   },
 ];
