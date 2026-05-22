@@ -1,0 +1,49 @@
+<footer class="relative mt-16 border-t border-sky-100 bg-white/70 backdrop-blur-md">
+  <!-- contenedor -->
+  <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 md:grid-cols-3 text-center md:text-left">
+    <!-- BRAND -->
+    <div class="space-y-3">
+      <h2
+        class="text-lg font-extrabold bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-transparent"
+      >
+        Daniel.dev
+      </h2>
+      <p class="text-sm text-base-content/60">
+        Desarrollador enfocado en crear aplicaciones modernas, rápidas y bien estructuradas.
+      </p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="space-y-3">
+      <h3 class="font-semibold text-sky-600">Navegación</h3>
+      <ul class="space-y-1 text-sm text-base-content/70">
+        <li><a href="#home" class="hover:text-sky-600 transition">Inicio</a></li>
+        <li><a href="#projects" class="hover:text-sky-600 transition">Proyectos</a></li>
+        <li><a href="#skills" class="hover:text-sky-600 transition">Skills</a></li>
+        <li><a href="#contact" class="hover:text-sky-600 transition">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="space-y-3">
+      <h3 class="font-semibold text-sky-600">Conecta conmigo</h3>
+
+      <div class="flex justify-center md:justify-start gap-3">
+        @for (red of redes; track redes) {
+          <a
+            [href]="red.url"
+            target="_blank"
+            class="btn btn-sm bg-sky-100 text-sky-600 border-none hover:bg-sky-500 hover:text-white transition"
+          >
+            {{ red.label }}
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom -->
+  <div class="border-t border-sky-100 py-4 text-center text-sm text-base-content/50">
+    © {{ currentYear }} Daniel.dev
+  </div>
+</footer>
