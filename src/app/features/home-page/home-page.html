@@ -1,0 +1,64 @@
+<section
+  class="hero min-h-[80vh] rounded-box px-4 py-12 md:py-16 bg-gradient-to-br from-sky-100 via-white to-violet-100 relative overflow-hidden"
+>
+  <!-- Glow decorativo -->
+  <div
+    class="absolute -top-20 -left-20 w-72 h-72 bg-sky-400/30 rounded-full blur-3xl animate-pulse"
+  ></div>
+  <div
+    class="absolute bottom-0 right-0 w-72 h-72 bg-violet-400/30 rounded-full blur-3xl animate-pulse"
+  ></div>
+
+  <div class="hero-content max-w-6xl flex-col-reverse gap-10 md:flex-row md:gap-16">
+    <!-- TEXTO -->
+    <div class="text-center md:text-left md:w-1/2 space-y-4 animate-fade-in">
+      <p class="text-sky-600 font-semibold tracking-wide uppercase">
+        {{ profile.role }}
+      </p>
+
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        {{ profile.name }}
+      </h1>
+
+      <p class="text-lg text-base-content/90">
+        {{ profile.headline }}
+      </p>
+
+      <p class="text-base-content/70">
+        {{ profile.about }}
+      </p>
+
+      <div class="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
+        <a
+          routerLink="/projects"
+          class="btn bg-sky-500 hover:bg-sky-600 text-white border-none shadow-lg hover:scale-105 transition-all duration-300"
+        >
+          Ver proyectos
+        </a>
+
+        <a
+          routerLink="/contact"
+          class="btn btn-outline border-sky-500 text-sky-600 hover:bg-sky-500 hover:text-white transition-all duration-300"
+        >
+          Contactarme
+        </a>
+      </div>
+    </div>
+
+    <!-- FOTO -->
+    <div class="md:w-1/2 flex justify-center animate-float">
+      <div class="relative">
+        <div
+          class="absolute inset-0 bg-gradient-to-tr from-sky-400 to-violet-400 blur-2xl opacity-30 rounded-full"
+        ></div>
+
+        <img
+          [src]="profile.image"
+          [alt]="profile.name"
+          class="w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-full border-4 border-white shadow-2xl relative z-10 hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<about-section />

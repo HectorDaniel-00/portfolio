@@ -1,0 +1,49 @@
+<section class="relative px-4 py-16 md:py-20">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="space-y-5 animate-fade-in">
+      <span
+        class="inline-block px-4 py-1 text-sm font-semibold text-sky-600 bg-sky-100 rounded-full"
+      >
+        Sobre mí
+      </span>
+      <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
+        {{ aboutForMe.title }}
+      </h2>
+      <p class="text-base-content/70">
+        {{ aboutForMe.text1 }}
+      </p>
+      <p class="text-base-content/70">
+        {{ aboutForMe.text2 }}
+      </p>
+      <!-- STATS -->
+      <div class="grid grid-cols-2 gap-4 pt-4">
+        <div
+          class="p-4 rounded-xl bg-white/70 backdrop-blur border border-sky-100 text-center shadow-sm"
+        >
+          <p class="text-2xl font-bold text-sky-600">+{{ aboutForMe.numberProjects }}</p>
+          <p class="text-sm text-base-content/60">Proyectos</p>
+        </div>
+
+        <div
+          class="p-4 rounded-xl bg-white/70 backdrop-blur border border-sky-100 text-center shadow-sm"
+        >
+          <p class="text-2xl font-bold text-sky-600">{{ aboutForMe.yearsLearning }}+</p>
+          <p class="text-sm text-base-content/60">Año aprendiendo</p>
+        </div>
+      </div>
+    </div>
+    <!-- LADO DERECHO (cards visuales) -->
+    <div class="grid gap-4 animate-fade-in">
+      @for (item of aboutForMe.cards; track $index) {
+        <div
+          class="p-5 rounded-xl bg-white/80 backdrop-blur border border-sky-100 shadow-md hover:shadow-xl transition"
+        >
+          <h3 class="font-semibold text-sky-600 mb-1">{{ item.title }}</h3>
+          <p class="text-sm text-base-content/70">
+            {{ item.description }}
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
