@@ -16,7 +16,6 @@ export interface Project {
   stack: string[];
   image: string;
   liveUrl: string;
-  repositoryUrl: string;
 }
 
 export interface AboutForMe {
