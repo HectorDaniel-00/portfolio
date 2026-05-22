@@ -13,14 +13,17 @@ export const profile: Profile = {
 export const projects: Project[] = [
   {
     name: 'Portafolio Personal',
-    descrption: 'Panel para visualizar métricas comerciales en tiempo real.',
-    problem: 'Las ventas no tenían seguimiento claro ni visualización centralizada.',
-    solution: 'Se desarrolló un dashboard con filtros dinámicos y gráficos interactivos.',
-    impact: 'Reducción del tiempo de análisis en un 40%.',
-    summary: 'Sitio para presentar experiencia, proyectos y contacto con foco en performance.',
+    descrption:
+      'Aplicación web moderna para presentar proyectos, habilidades y experiencia como desarrollador frontend.',
+    problem:
+      'Era necesario contar con una plataforma profesional para centralizar proyectos, tecnologías y experiencia en un solo lugar.',
+    solution:
+      'Se desarrolló un portafolio interactivo con Angular, componentes reutilizables y diseño responsive enfocado en performance y experiencia de usuario.',
+    impact:
+      'Mejor presentación profesional y organización de proyectos, facilitando la visualización de habilidades y tecnologías utilizadas.',
+    summary: 'Portafolio personal desarrollado con Angular moderno.',
     stack: ['Angular', 'TypeScript', 'Tailwind', 'Daisy UI'],
     liveUrl: '#',
-    repositoryUrl: 'https://github.com/HectorDaniel-00/portfolio_angular',
     image:
       'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
   },
@@ -33,7 +36,6 @@ export const projects: Project[] = [
     summary: 'Panel con filtros, gráficos y exportación para seguimiento comercial.',
     stack: ['Angular', 'RxJS', 'Chart.js'],
     liveUrl: '#',
-    repositoryUrl: '#',
     image:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
   },
@@ -46,22 +48,8 @@ export const projects: Project[] = [
     summary: 'Aplicación para gestionar reservas con validaciones y calendario interactivo.',
     stack: ['Angular', 'Node.js', 'PostgreSQL'],
     liveUrl: '#',
-    repositoryUrl: '#',
     image:
       'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    name: 'Automatizacion',
-    descrption: 'Panel para visualizar métricas comerciales en tiempo real.',
-    problem: 'Las ventas no tenían seguimiento claro ni visualización centralizada.',
-    solution: 'Se desarrolló un dashboard con filtros dinámicos y gráficos interactivos.',
-    impact: 'Reducción del tiempo de análisis en un 40%.',
-    summary: 'Panel con filtros, gráficos y exportación para seguimiento comercial.',
-    stack: ['N8N', 'Google Developers Console'],
-    liveUrl: '#',
-    repositoryUrl: '#',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
   },
 ];
 
