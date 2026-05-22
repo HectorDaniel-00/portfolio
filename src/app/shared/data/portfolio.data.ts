@@ -74,15 +74,15 @@ export const aboutForMe: AboutForMe = {
   yearsLearning: 1,
   cards: [
     {
-      title: '🚀 Enfoque',
+      title: 'Enfoque',
       description: 'Desarrollo aplicaciones rápidas, limpias y bien estructuradas.',
     },
     {
-      title: '⚙️ Tecnologías',
+      title: 'Tecnologías',
       description: 'Angular moderno, Node.js, APIs REST y bases de datos relacionales.',
     },
     {
-      title: '🧠 Mentalidad',
+      title: 'Mentalidad',
       description: 'Aprendizaje constante, enfoque en buenas prácticas y código mantenible.',
     },
   ],
