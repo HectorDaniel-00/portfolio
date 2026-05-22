@@ -1,0 +1,61 @@
+@if (project()) {
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+    <div class="relative w-full max-w-2xl p-6 rounded-2xl bg-white shadow-2xl animate-fade-in">
+      <!-- CLOSE -->
+      <button class="absolute top-3 right-3 btn btn-sm btn-circle btn-ghost" (click)="close.emit()">
+        ✕
+      </button>
+
+      <img [src]="project()!.image" class="w-full h-48 object-cover rounded-xl mb-4" />
+
+      <h2 class="text-2xl font-bold mb-2">
+        {{ project()!.name }}
+      </h2>
+
+      <p class="text-base-content/70 mb-4">
+        {{ project()!.descrption }}
+      </p>
+
+      <p class="text-sm mb-2">
+        <span class="font-semibold text-sky-600">Problema:</span>
+        {{ project()!.problem }}
+      </p>
+
+      <p class="text-sm mb-2">
+        <span class="font-semibold text-sky-600">Solución:</span>
+        {{ project()!.solution }}
+      </p>
+
+      <p class="text-sm mb-4">
+        <span class="font-semibold text-sky-600">Impacto:</span>
+        {{ project()!.impact }}
+      </p>
+
+      <div class="flex flex-wrap gap-2 mb-4">
+        @for (item of project()!.stack; track item) {
+          <span class="badge bg-sky-100 text-sky-600 border-none">
+            {{ item }}
+          </span>
+        }
+      </div>
+
+      <div class="flex gap-3">
+        <a
+          [href]="project()!.liveUrl"
+          target="_blank"
+          class="btn bg-sky-500 text-white border-none"
+        >
+          Ver proyecto
+        </a>
+
+        <a
+          [href]="project()!.repositoryUrl"
+          target="_blank"
+          class="btn btn-outline border-sky-500 text-sky-600"
+        >
+          Código
+        </a>
+      </div>
+    </div>
+  </div>
+}
