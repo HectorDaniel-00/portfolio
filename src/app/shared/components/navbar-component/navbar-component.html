@@ -1,0 +1,75 @@
+<nav class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-sky-100">
+  <div class="navbar mx-auto max-w-6xl px-4">
+    <!-- LOGO -->
+    <div class="flex-1">
+      <a
+        routerLink="/"
+        class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-transparent hover:opacity-80 transition"
+      >
+        Daniel.dev
+      </a>
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex items-center gap-6">
+      @for (item of items; track $index) {
+        <a
+          [href]="item.url"
+          routerLinkActive="text-sky-600"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="relative font-medium text-base-content/70 hover:text-sky-600 transition"
+        >
+          {{ item.label }}
+        </a>
+      }
+
+      <!-- CTA -->
+      <a
+        href="#contact"
+        class="btn bg-sky-500 hover:bg-sky-600 text-white border-none shadow-md hover:scale-105 transition-all duration-300"
+      >
+        Hablemos
+      </a>
+    </div>
+
+    <!-- MOBILE -->
+    <div class="md:hidden">
+      <details class="dropdown dropdown-end">
+        <summary class="btn btn-ghost btn-circle hover:bg-sky-100 transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="h-6 w-6 stroke-current"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </summary>
+
+        <ul
+          class="menu dropdown-content mt-3 w-56 p-3 rounded-xl bg-white/90 backdrop-blur border border-sky-100 shadow-xl space-y-1"
+        >
+          @for (item of items; track $index) {
+            <li>
+              <a
+                [href]="item.url"
+                routerLinkActive="text-sky-600"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ item.label }}
+              </a>
+            </li>
+          }
+          <li class="pt-2">
+            <a href="#contact" class="btn bg-sky-500 text-white border-none w-full"> Hablemos </a>
+          </li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</nav>
