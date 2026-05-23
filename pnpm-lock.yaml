@@ -42,6 +42,9 @@ importers:
       '@angular/compiler-cli':
         specifier: ^21.2.0
         version: 21.2.14(@angular/compiler@21.2.14)(typescript@5.9.3)
+      '@parcel/watcher':
+        specifier: ^2.5.6
+        version: 2.5.6
       '@tailwindcss/postcss':
         specifier: ^4.1.12
         version: 4.3.0
@@ -54,6 +57,12 @@ importers:
       jsdom:
         specifier: ^28.0.0
         version: 28.1.0
+      lmdb:
+        specifier: ^3.5.4
+        version: 3.5.4
+      msgpackr-extract:
+        specifier: ^3.0.3
+        version: 3.0.3
       postcss:
         specifier: ^8.5.3
         version: 8.5.15
@@ -914,8 +923,18 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
+  '@lmdb/lmdb-darwin-arm64@3.5.4':
+    resolution: {integrity: sha512-Kk4Kz3iyu1QiLsLZBS9Af1eSKUC8VR2T+/jyE2iAyuGw2VwK08pp5iTbZnXn6sWu0LogO/RFktMxOjiDA2sS3w==}
+    cpu: [arm64]
+    os: [darwin]
+
   '@lmdb/lmdb-darwin-x64@3.5.1':
     resolution: {integrity: sha512-+a2tTfc3rmWhLAolFUWRgJtpSuu+Fw/yjn4rF406NMxhfjbMuiOUTDRvRlMFV+DzyjkwnokisskHbCWkS3Ly5w==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@lmdb/lmdb-darwin-x64@3.5.4':
+    resolution: {integrity: sha512-BEe5Rp3trn26oxoXOVL5HVDoiYmjUDwr8NRPkBOdUdCSBEorKI+7JrZLRKAdxO+G6cGQLgseXk0gR7qIQa7aGw==}
     cpu: [x64]
     os: [darwin]
 
@@ -924,8 +943,18 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  '@lmdb/lmdb-linux-arm64@3.5.4':
+    resolution: {integrity: sha512-cUXEengO8o60v1SWerJTH4/RH4U3+9jC0/4njp2Z9NdmvaGzhKsbRM2wpXuRYrN8tytsoJCg0SvWEWwHAwLbCA==}
+    cpu: [arm64]
+    os: [linux]
+
   '@lmdb/lmdb-linux-arm@3.5.1':
     resolution: {integrity: sha512-0EgcE6reYr8InjD7V37EgXcYrloqpxVPINy3ig1MwDSbl6LF/vXTYRH9OE1Ti1D8YZnB35ZH9aTcdfSb5lql2A==}
+    cpu: [arm]
+    os: [linux]
+
+  '@lmdb/lmdb-linux-arm@3.5.4':
+    resolution: {integrity: sha512-SGbFR7816uBcTHc2ZY4S6WyOkl9bICnzqTQd2Mv4V/j24cfds88xx2nC6cm/y8zGQL7Ds31YF/5NGxjgcdM5Hw==}
     cpu: [arm]
     os: [linux]
 
@@ -934,13 +963,28 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  '@lmdb/lmdb-linux-x64@3.5.4':
+    resolution: {integrity: sha512-Gxq8jpgOWXwd0PUR+c9R2Ik1/uBnGd5GMIIzRRDqABCkvmjtC3KWcyhesV9jSPCz759isl0NlbsstZ2oyvk8lA==}
+    cpu: [x64]
+    os: [linux]
+
   '@lmdb/lmdb-win32-arm64@3.5.1':
     resolution: {integrity: sha512-50v0O1Lt37cwrmR9vWZK5hRW0Aw+KEmxJJ75fge/zIYdvNKB/0bSMSVR5Uc2OV9JhosIUyklOmrEvavwNJ8D6w==}
     cpu: [arm64]
     os: [win32]
 
+  '@lmdb/lmdb-win32-arm64@3.5.4':
+    resolution: {integrity: sha512-pKv1DJ1bPZAaHkdFsSz5IDfUG8x9vntgquXF9/Dm2xuupcIe/EkLzylpoBxppFVK5vzbV561Dq26jNY2fIMA7g==}
+    cpu: [arm64]
+    os: [win32]
+
   '@lmdb/lmdb-win32-x64@3.5.1':
     resolution: {integrity: sha512-qwosvPyl+zpUlp3gRb7UcJ3H8S28XHCzkv0Y0EgQToXjQP91ZD67EHSCDmaLjtKhe+GVIW5om1KUpzVLA0l6pg==}
+    cpu: [x64]
+    os: [win32]
+
+  '@lmdb/lmdb-win32-x64@3.5.4':
+    resolution: {integrity: sha512-JF1BmLCm9kGEVZgYmJq43zeQVdHVgAJnTi/NURWEsy6L1ZrrlSmdltS+D17QN4LODwf+1LMXAA9auIZVXtWwzw==}
     cpu: [x64]
     os: [win32]
 
@@ -2315,6 +2359,10 @@ packages:
     resolution: {integrity: sha512-NYHA0MRPjvNX+vSw8Xxg6FLKxzAG+e7Pt8RqAQA/EehzHVXq9SxDqJIN3JL1hK0dweb884y8kIh6rkWvPyg9Wg==}
     hasBin: true
 
+  lmdb@3.5.4:
+    resolution: {integrity: sha512-9FKQA6G1MMtqNxfxvSBNXD/axeG2QRjYbNh0/ykRL5xYcRbCm2vXq7B9bhc7nSuKdHzr8/BHIwfPuYYH1UsXXw==}
+    hasBin: true
+
   log-symbols@7.0.1:
     resolution: {integrity: sha512-ja1E3yCr9i/0hmBVaM0bfwDjnGy8I/s6PP4DFp+yP+a+mrHO4Rm7DtmnqROTUkHIkqffC84YY7AeqX6oFk0WFg==}
     engines: {node: '>=18'}
@@ -3670,8 +3718,7 @@ snapshots:
 
   '@gar/promise-retry@1.0.3': {}
 
-  '@harperfast/extended-iterable@1.0.3':
-    optional: true
+  '@harperfast/extended-iterable@1.0.3': {}
 
   '@hono/node-server@1.19.14(hono@4.12.21)':
     dependencies:
@@ -3810,22 +3857,43 @@ snapshots:
   '@lmdb/lmdb-darwin-arm64@3.5.1':
     optional: true
 
+  '@lmdb/lmdb-darwin-arm64@3.5.4':
+    optional: true
+
   '@lmdb/lmdb-darwin-x64@3.5.1':
+    optional: true
+
+  '@lmdb/lmdb-darwin-x64@3.5.4':
     optional: true
 
   '@lmdb/lmdb-linux-arm64@3.5.1':
     optional: true
 
+  '@lmdb/lmdb-linux-arm64@3.5.4':
+    optional: true
+
   '@lmdb/lmdb-linux-arm@3.5.1':
+    optional: true
+
+  '@lmdb/lmdb-linux-arm@3.5.4':
     optional: true
 
   '@lmdb/lmdb-linux-x64@3.5.1':
     optional: true
 
+  '@lmdb/lmdb-linux-x64@3.5.4':
+    optional: true
+
   '@lmdb/lmdb-win32-arm64@3.5.1':
     optional: true
 
+  '@lmdb/lmdb-win32-arm64@3.5.4':
+    optional: true
+
   '@lmdb/lmdb-win32-x64@3.5.1':
+    optional: true
+
+  '@lmdb/lmdb-win32-x64@3.5.4':
     optional: true
 
   '@modelcontextprotocol/sdk@1.26.0(zod@4.3.6)':
@@ -4064,7 +4132,6 @@ snapshots:
       '@parcel/watcher-win32-arm64': 2.5.6
       '@parcel/watcher-win32-ia32': 2.5.6
       '@parcel/watcher-win32-x64': 2.5.6
-    optional: true
 
   '@rolldown/binding-android-arm64@1.0.0-rc.4':
     optional: true
@@ -4934,8 +5001,7 @@ snapshots:
 
   ipaddr.js@1.9.1: {}
 
-  is-extglob@2.1.1:
-    optional: true
+  is-extglob@2.1.1: {}
 
   is-fullwidth-code-point@3.0.0: {}
 
@@ -4946,7 +5012,6 @@ snapshots:
   is-glob@4.0.3:
     dependencies:
       is-extglob: 2.1.1
-    optional: true
 
   is-interactive@2.0.0: {}
 
@@ -5095,6 +5160,23 @@ snapshots:
       '@lmdb/lmdb-win32-x64': 3.5.1
     optional: true
 
+  lmdb@3.5.4:
+    dependencies:
+      '@harperfast/extended-iterable': 1.0.3
+      msgpackr: 1.11.12
+      node-addon-api: 6.1.0
+      node-gyp-build-optional-packages: 5.2.2
+      ordered-binary: 1.6.1
+      weak-lru-cache: 1.2.2
+    optionalDependencies:
+      '@lmdb/lmdb-darwin-arm64': 3.5.4
+      '@lmdb/lmdb-darwin-x64': 3.5.4
+      '@lmdb/lmdb-linux-arm': 3.5.4
+      '@lmdb/lmdb-linux-arm64': 3.5.4
+      '@lmdb/lmdb-linux-x64': 3.5.4
+      '@lmdb/lmdb-win32-arm64': 3.5.4
+      '@lmdb/lmdb-win32-x64': 3.5.4
+
   log-symbols@7.0.1:
     dependencies:
       is-unicode-supported: 2.1.0
@@ -5203,12 +5285,10 @@ snapshots:
       '@msgpackr-extract/msgpackr-extract-linux-arm64': 3.0.3
       '@msgpackr-extract/msgpackr-extract-linux-x64': 3.0.3
       '@msgpackr-extract/msgpackr-extract-win32-x64': 3.0.3
-    optional: true
 
   msgpackr@1.11.12:
     optionalDependencies:
       msgpackr-extract: 3.0.3
-    optional: true
 
   mute-stream@2.0.0: {}
 
@@ -5216,16 +5296,13 @@ snapshots:
 
   negotiator@1.0.0: {}
 
-  node-addon-api@6.1.0:
-    optional: true
+  node-addon-api@6.1.0: {}
 
-  node-addon-api@7.1.1:
-    optional: true
+  node-addon-api@7.1.1: {}
 
   node-gyp-build-optional-packages@5.2.2:
     dependencies:
       detect-libc: 2.1.2
-    optional: true
 
   node-gyp@12.3.0:
     dependencies:
@@ -5321,8 +5398,7 @@ snapshots:
       stdin-discarder: 0.3.2
       string-width: 8.2.1
 
-  ordered-binary@1.6.1:
-    optional: true
+  ordered-binary@1.6.1: {}
 
   p-map@7.0.4: {}
 
@@ -5820,8 +5896,7 @@ snapshots:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
 
-  weak-lru-cache@1.2.2:
-    optional: true
+  weak-lru-cache@1.2.2: {}
 
   webidl-conversions@8.0.1: {}
 
